@@ -1,4 +1,4 @@
-FROM piredtu/docker-openmdao
+FROM piredtu/openmdao:0.10.3.2
 
 MAINTAINER Pierre-Elouan Rethore <pire@dtu.dk>
 
@@ -7,4 +7,4 @@ RUN bash -c "source $OPENMDAODIR/bin/activate; pip install -e git+http://github.
 
 WORKDIR /
 
-CMD ["/notebook.sh"]
+CMD /bin/omdao /notebook.sh
